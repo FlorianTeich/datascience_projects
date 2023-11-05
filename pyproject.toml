@@ -26,3 +26,27 @@ select = [
     "T201", # Print Statement
 ]
 ignore = ["E501"]  # Black takes care of line-too-long
+
+
+[tool.poetry]
+name = "datascience-projects"
+version = "0.1.0"
+description = ""
+authors = ["Florian Teich"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "==3.11.6"
+kedro = {version = "^0.18.14", extras = ["spark"]}
+pandas = "^2.1.2"
+sqlalchemy = "^2.0.23"
+jupyter = "^1.0.0"
+kedro-viz = "^6.6.1"
+kedro-datasets = "^1.8.0"
+pyarrow = "^14.0.0"
+fastparquet = "^2023.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
