@@ -1,12 +1,12 @@
 """Project settings. There is no need to edit this file unless you want to change values
 from the Kedro defaults. For further information, including these default values, see
-https://kedro.readthedocs.io/en/stable/kedro_project_setup/settings.html."""
+https://docs.kedro.org/en/stable/kedro_project_setup/settings.html."""
 
 # Instantiated project hooks.
-# For example, after creating a hooks.py and defining a ProjectHooks class there, do
-# from datascience_projects.hooks import ProjectHooks
+from datascience_projects.hooks import SparkHooks  # noqa: E402
+
 # Hooks are executed in a Last-In-First-Out (LIFO) order.
-# HOOKS = (ProjectHooks(),)
+HOOKS = (SparkHooks(),)
 
 # Installed plugins for which to disable hook auto-registration.
 # DISABLE_HOOKS_FOR_PLUGINS = ("kedro-viz",)
@@ -23,16 +23,16 @@ https://kedro.readthedocs.io/en/stable/kedro_project_setup/settings.html."""
 # CONF_SOURCE = "conf"
 
 # Class that manages how configuration is loaded.
-from kedro.config import OmegaConfigLoader  # noqa: import-outside-toplevel
+from kedro.config import OmegaConfigLoader  # noqa: E402
 
 CONFIG_LOADER_CLASS = OmegaConfigLoader
 # Keyword arguments to pass to the `CONFIG_LOADER_CLASS` constructor.
-# CONFIG_LOADER_ARGS = {
-#       "config_patterns": {
-#           "spark" : ["spark*/"],
-#           "parameters": ["parameters*", "parameters*/**", "**/parameters*"],
-#       }
-# }
+CONFIG_LOADER_ARGS = {
+    "config_patterns": {
+        "spark": ["spark*/", "spark*/**"],
+        "parameters": ["parameters*", "parameters*/**", "**/parameters*"],
+    }
+}
 
 # Class that manages Kedro's library components.
 # from kedro.framework.context import KedroContext

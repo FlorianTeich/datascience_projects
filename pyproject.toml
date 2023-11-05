@@ -3,9 +3,6 @@ package_name = "datascience_projects"
 project_name = "datascience_projects"
 kedro_init_version = "0.18.14"
 
-[tool.isort]
-profile = "black"
-
 [tool.pytest.ini_options]
 addopts = """
 --cov-report term-missing \
@@ -16,23 +13,16 @@ fail_under = 0
 show_missing = true
 exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
 
-[tool.poetry]
-name = "datascience-projects"
-version = "0.1.0"
-description = ""
-authors = ["Florian Teich"]
-license = "MIT"
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "==3.11.6"
-kedro = "^0.18.14"
-pandas = "^2.1.2"
-sqlalchemy = "^2.0.23"
-jupyter = "^1.0.0"
-pyspark = "^3.5.0"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.ruff]
+line-length = 88
+show-fixes = true
+select = [
+    "F",   # Pyflakes
+    "W",   # pycodestyle
+    "E",   # pycodestyle
+    "I",   # isort
+    "UP",  # pyupgrade
+    "PL",  # Pylint
+    "T201", # Print Statement
+]
+ignore = ["E501"]  # Black takes care of line-too-long
