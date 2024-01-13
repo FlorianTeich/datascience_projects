@@ -1,0 +1,21 @@
+{
+  "id": "florianteich/spaceship-titanic",
+  "id_no": 46377908,
+  "title": "\ud83d\ude80 Spaceship Titanic",
+  "code_file": "spaceship-titanic.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "florianteich/spaceship-titanic-charts-json"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "spaceship-titanic"
+  ],
+  "model_sources": []
+}

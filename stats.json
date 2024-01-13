@@ -1,1 +1,0 @@
-{"X_train": {"rows": 122, "columns": 4, "file_size": 4096}, "X_test": {"rows": 28, "columns": 4, "file_size": 4096}, "y_train": {"rows": 122, "columns": 1, "file_size": 4096}, "y_pred": {"rows": 28, "columns": 1}, "y_test": {"rows": 28, "columns": 1, "file_size": 4096}}
